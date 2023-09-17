@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class EmpresaService {
+public class EmpresaService {//CambioGiancarlo
 
     @Autowired
     private final EmpresaRepo empresaRepo;
