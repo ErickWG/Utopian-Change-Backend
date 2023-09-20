@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class RegisterRequest {
     String username;
-    String apellidoUsuario;
-    String nombreUsuario;
-    String correoUsuario; //se podría quitar y solo quedarnos con el usuario
     String password; //si o si debe ser password para que el UserDetailsfuncione
+    String nombreUsuario;
+    String apellidoUsuario;
+    String correoUsuario; //se podría quitar y solo quedarnos con el usuario
 }
