@@ -1,9 +1,7 @@
 package com.upc.practice.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,4 +19,7 @@ public class CentroReciclaje {
     private String horarioCentro;
     private String correoCentro;
     private String sitioWebCentro;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
+    private Material material;
 }
