@@ -14,6 +14,7 @@ public class CentroReciclaje {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCentroReciclaje;
+    private String nombreCentro;
     private String ubicacionCentro;
     private String detalleCentro;
     private String horarioCentro;
