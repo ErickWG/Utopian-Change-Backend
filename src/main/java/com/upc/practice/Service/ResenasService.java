@@ -23,5 +23,4 @@ public class ResenasService {
     public List<Resenas> lsResena(){ return resenasRepo.findAll();}
 
 
-
 }
