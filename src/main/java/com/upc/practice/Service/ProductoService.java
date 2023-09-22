@@ -23,8 +23,5 @@ public class ProductoService {
 
     public Producto listaPorId(Long id){
         return productoRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException("No existe registro con ese ID = "+id));
-
     }
-
-
 }

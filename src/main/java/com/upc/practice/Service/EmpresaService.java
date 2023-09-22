@@ -26,7 +26,7 @@ public class EmpresaService {//CambioGiancarlo
 
     // Busca por ID
     public Empresa listaPorID(Long id){
-        return empresaRepo.findById(id).orElseThrow(()-> new OpenApiResourceNotFoundException("No existe registor con ese ID"));
+        return empresaRepo.findById(id).orElseThrow(()-> new OpenApiResourceNotFoundException("No existe registro con ese ID"));
     }
 
     public Empresa modifica(Long id, Empresa empresa) throws Exception{
