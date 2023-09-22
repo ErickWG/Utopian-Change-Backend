@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/centroReciclaje")
 public class CentroReciclajeController {
     @Autowired
-    private final CentroReciclajeService centroReciclajeService;
+    public final CentroReciclajeService centroReciclajeService;
 
     public CentroReciclajeController(CentroReciclajeService centroReciclajeService) {
         this.centroReciclajeService = centroReciclajeService;
