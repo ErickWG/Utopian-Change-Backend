@@ -28,8 +28,8 @@ public class Producto {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name= "producto_material",
-            joinColumns = @JoinColumn(name = "id_producto", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "id_material", referencedColumnName = "id"))
+            joinColumns = @JoinColumn(name = "producto_id", referencedColumnName = "idProducto"),
+            inverseJoinColumns = @JoinColumn(name = "material_id", referencedColumnName = "idMaterial"))
     private List<Material> materials;
     public Producto(String nombreProducto, String detalleProducto, double precioProducto, LocalDate fecha, Empresa empresa, List<Material> materials) {
         this.nombreProducto = nombreProducto;

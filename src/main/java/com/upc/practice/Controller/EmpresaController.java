@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/empresa")
-public class EmpresaController {
+public class  EmpresaController {
     @Autowired
     public final EmpresaService empresaService;
 

@@ -19,4 +19,6 @@ public class Material {
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
     private User user;
+
+
 }
