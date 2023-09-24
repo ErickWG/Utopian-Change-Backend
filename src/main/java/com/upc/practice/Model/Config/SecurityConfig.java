@@ -19,8 +19,7 @@ public class SecurityConfig {
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
     private final AuthenticationProvider authProvider;
 
-
-/*    @Bean
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
     {
         return http
@@ -29,7 +28,7 @@ public class SecurityConfig {
                                 .disable())
                 .authorizeHttpRequests(authRequest ->
                         authRequest
-                                .requestMatchers("/doc/swagger-ui/index.html").permitAll()
+                                .requestMatchers("/auth/**").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(sessionManager->
@@ -38,6 +37,6 @@ public class SecurityConfig {
                 .authenticationProvider(authProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
-    }*/
+    }
 
 }

@@ -28,7 +28,10 @@ public class MaterialController {
     public ResponseEntity<List<Material>> listaMaterial(){
         return new ResponseEntity<>(materialService.lsMaterial(), HttpStatus.OK);
     }
-
+    @GetMapping("/listPorNombre")
+    public ResponseEntity<Material> listaMaterialPorNombre(@RequestParam String nombreMaterial){
+        return new ResponseEntity<>(materialService.listarPorNombre(nombreMaterial), HttpStatus.OK);
+    }
     @GetMapping("/{id}")
     public ResponseEntity<Material> listaPorID(@PathVariable Long id){
         return new ResponseEntity<>(materialService.listaporId(id), HttpStatus.OK);

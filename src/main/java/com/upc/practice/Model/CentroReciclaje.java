@@ -20,7 +20,9 @@ public class CentroReciclaje {
     private String horarioCentro;
     private String correoCentro;
     private String sitioWebCentro;
-    @ManyToOne(fetch = FetchType.LAZY)
+    private String distrito;
+
+/*    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
-    private Material material;
+    private Material material;*/
 }

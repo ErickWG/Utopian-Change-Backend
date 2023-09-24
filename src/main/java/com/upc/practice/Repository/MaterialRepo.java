@@ -8,4 +8,5 @@ import java.util.List;
 
 @Repository
 public interface MaterialRepo extends JpaRepository<Material, Long> {
+    Material findByNombreMaterial(String nombreM);
 }

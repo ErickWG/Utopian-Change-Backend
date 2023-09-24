@@ -21,7 +21,6 @@ public class Producto {
     private String nombreProducto;
     private String detalleProducto;
     private double precioProducto;
-    private LocalDate fecha;
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Empresa empresa;
@@ -35,7 +34,6 @@ public class Producto {
         this.nombreProducto = nombreProducto;
         this.detalleProducto = detalleProducto;
         this.precioProducto = precioProducto;
-        this.fecha = fecha;
         this.empresa = empresa;
         this.materials = materials;
     }

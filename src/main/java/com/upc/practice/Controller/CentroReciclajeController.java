@@ -2,6 +2,7 @@ package com.upc.practice.Controller;
 
 import com.upc.practice.Model.CentroReciclaje;
 import com.upc.practice.Model.Empresa;
+import com.upc.practice.Model.Material;
 import com.upc.practice.Service.CentroReciclajeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
