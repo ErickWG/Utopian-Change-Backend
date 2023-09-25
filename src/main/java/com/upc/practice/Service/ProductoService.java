@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ProductoService {
@@ -24,4 +25,8 @@ public class ProductoService {
     public Producto listaPorId(Long id){
         return productoRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException("No existe registro con ese ID = "+id));
     }
+    public List<Producto>buscarProductoEntrePrecios(Double precioMin, Double precioMax){
+        return productoRepo.findByPrecioProductoBetween(precioMin,precioMax);
+    }
+    public Map<String,Long>ContarProductosPorEmpresa(Long empresa_id){return productoRepo.ContarProductosPorEmpresa(empresa_id);}
 }

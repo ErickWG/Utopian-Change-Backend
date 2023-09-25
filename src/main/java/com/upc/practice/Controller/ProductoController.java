@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/producto")
@@ -33,5 +34,10 @@ public class ProductoController {
     public ResponseEntity<Producto> insert(@RequestBody Producto producto){
         return new ResponseEntity<>(productoService.insert(producto), HttpStatus.CREATED);
     }
-
+    @GetMapping("/buscarentreprecios")
+    public ResponseEntity<List<Producto>>buscarProductoEntrePrecios(@RequestParam Double precioMin,@RequestParam Double precioMax){
+        return new ResponseEntity<>(productoService.buscarProductoEntrePrecios(precioMin,precioMax), HttpStatus.CREATED);
+    }
+    @GetMapping("/contarPorEmpresa")
+    public ResponseEntity<Map<String,Long>> contarPorEmpresaProducto(Long empresa_id){return new ResponseEntity<>(productoService.ContarProductosPorEmpresa(empresa_id),HttpStatus.OK);}
 }

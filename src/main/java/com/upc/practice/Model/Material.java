@@ -17,6 +17,7 @@ public class Material {
     private String detalleMaterial;
     private String nombreMaterial;
     private Double Precio;
+    private Boolean es_reciclable;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
