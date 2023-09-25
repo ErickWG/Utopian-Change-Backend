@@ -1,6 +1,5 @@
 package com.upc.practice.Service;
 
-import com.upc.practice.Model.Compra;
 import com.upc.practice.Model.DetalleVenta;
 import com.upc.practice.Repository.DetalleVentaRepository;
 import org.springdoc.api.OpenApiResourceNotFoundException;

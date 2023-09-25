@@ -17,11 +17,11 @@ public class Material {
     private String detalleMaterial;
     private String nombreMaterial;
     private Double Precio;
-/*
+
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
-    private User user;
-*/
+    private CentroReciclaje centroReciclaje;
 
 
 }

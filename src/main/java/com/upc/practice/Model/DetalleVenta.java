@@ -14,8 +14,8 @@ public class DetalleVenta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idDetalleVenta;
-    private Long cantidadDetalleVenta;
-    private Long PrecioUnitarioDVenta;
+    private Double cantidadDetalleVenta;
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})

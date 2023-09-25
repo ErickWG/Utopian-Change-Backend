@@ -1,6 +1,5 @@
 package com.upc.practice.Controller;
 
-import com.upc.practice.Model.Compra;
 import com.upc.practice.Model.DetalleVenta;
 import com.upc.practice.Service.DetalleVentaService;
 import org.springframework.http.HttpStatus;
