@@ -32,10 +32,6 @@ public class MaterialController {
     public ResponseEntity<Material> listaMaterialPorNombre(@RequestParam String nombreMaterial){
         return new ResponseEntity<>(materialService.listarPorNombre(nombreMaterial), HttpStatus.OK);
     }
-    @GetMapping("/{id}")
-    public ResponseEntity<Material> listaPorID(@PathVariable Long id){
-        return new ResponseEntity<>(materialService.listaporId(id), HttpStatus.OK);
-    }
 
     @PutMapping("/{id}")
     public ResponseEntity<Material> modifica (@PathVariable Long id,@RequestBody Material material) throws Exception {
