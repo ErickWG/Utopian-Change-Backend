@@ -26,7 +26,7 @@ public class MaterialesReciService {
         MaterialesReci material;
         material=new MaterialesReci();
         for (Material m:materials){
-            if (Objects.equals(nombreMaterial, m.getNombreMaterial())){
+            if (Objects.equals(nombreMaterial, m.getNombreMaterial()) && m.getEs_reciclable()){
                 material.setNombreMaterial(m.getNombreMaterial());
                 material.setDetalleMaterial(m.getDetalleMaterial());
                 material.setPrecio(m.getPrecio());
