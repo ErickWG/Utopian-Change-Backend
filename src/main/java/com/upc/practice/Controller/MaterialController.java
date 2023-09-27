@@ -33,9 +33,9 @@ public class MaterialController {
         return new ResponseEntity<>(materialService.listarPorNombre(nombreMaterial), HttpStatus.OK);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Material> modifica (@PathVariable Long id,@RequestBody Material material) throws Exception {
-        return new ResponseEntity<>(materialService.modifica(id, material), HttpStatus.OK);
+    @PutMapping
+    public ResponseEntity<Material> modifica (@RequestBody Material material) throws Exception {
+        return new ResponseEntity<>(materialService.modifica(material), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

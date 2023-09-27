@@ -29,10 +29,9 @@ public class MaterialService {
     }
 
     //modificar
-    public Material modifica (Long id, Material material) throws Exception{
-        Material m= materialRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException(("No se encontro el ID" + id)));
-        m.setNombreMaterial(material.getNombreMaterial());
-        m.setDetalleMaterial(material.getDetalleMaterial());
+    public Material modifica (Material material) throws Exception{
+        Material mat= materialRepo.findById(material.getIdMaterial())
+                .orElseThrow(() -> new OpenApiResourceNotFoundException("Id de material no existe"));
         return materialRepo.save(material);
     }
 
