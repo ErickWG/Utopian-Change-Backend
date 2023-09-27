@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 
 public interface VentarRepo extends JpaRepository<Venta,Long> {
-    @Query(value="SELECT * FROM venta v JOIN userutopian u ON u.id_usuario = v.id_venta WHERE v.fecha_venta=?1", nativeQuery = true)
+    @Query(value="SELECT * FROM venta v WHERE v.fecha_venta=?1", nativeQuery = true)
     List<Venta> findUsuariosConComprasEnfecha(LocalDate fecha_venta);
 
 }
