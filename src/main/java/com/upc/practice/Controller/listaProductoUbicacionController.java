@@ -23,7 +23,7 @@ public class listaProductoUbicacionController {
         this.listaProductoUbicacionService = listaProductoUbicacionService;
     }
     @GetMapping
-    public ResponseEntity<List<listaProductoUbicacion>> listarProductoUbicación(@RequestParam String nombre){
-        return new ResponseEntity<>(listaProductoUbicacionService.listaProductoUbicacion(nombre), HttpStatus.OK);
+    public ResponseEntity<List<listaProductoUbicacion>> listarProductoUbicación(@RequestParam String nombreProducto){
+        return new ResponseEntity<>(listaProductoUbicacionService.listaProductoUbicacion(nombreProducto), HttpStatus.OK);
     }
 }
