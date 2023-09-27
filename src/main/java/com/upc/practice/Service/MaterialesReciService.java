@@ -44,7 +44,7 @@ public class MaterialesReciService {
         List<MaterialesReci> lista=new ArrayList<>();
 
         for (Material m:materials){
-                if (m.getCentroReciclaje()!=null){
+                if (m.getCentroReciclaje()!=null && m.getEs_reciclable()){
                     material=new MaterialesReci();
                     material.setNombreMaterial(m.getNombreMaterial());
                     material.setDetalleMaterial(m.getDetalleMaterial());
