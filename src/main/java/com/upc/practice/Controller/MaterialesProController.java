@@ -24,12 +24,12 @@ public class MaterialesProController {
     }
 
 
-    @GetMapping
+/*    @GetMapping
     public ResponseEntity<MaterialesPro> materialesPro(@RequestParam String nombreMaterial){
         return new ResponseEntity<>(materialesProService.materialesPro(nombreMaterial), HttpStatus.OK);
     }
     @GetMapping("/materialProls")
     public ResponseEntity<List<MaterialesPro>> listamaterialesPro(){
         return new ResponseEntity<>(materialesProService.lsmaterialesPro(), HttpStatus.OK);
-    }
+    }*/
 }

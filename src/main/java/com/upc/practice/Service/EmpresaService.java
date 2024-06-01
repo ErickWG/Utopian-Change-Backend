@@ -29,8 +29,8 @@ public class EmpresaService {//CambioGiancarlo
         return empresaRepo.findById(id).orElseThrow(()-> new OpenApiResourceNotFoundException("No existe registro con ese ID"));
     }
 
-    public Empresa modifica(Long id, Empresa empresa) throws Exception{
-        Empresa t = empresaRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException("No se encontro el ID" + id));
+    public Empresa modifica(Empresa empresa) throws Exception{
+        Empresa t = empresaRepo.findById(empresa.getIdEmpresa()).orElseThrow(()->new OpenApiResourceNotFoundException("No se encontro el ID" + empresa.getIdEmpresa()));
         // PARA QUE NO SE CREE OTRO REGISTRO YA QUE ESTAS MODIFICANDO EN BASE AL ID
         t.setNombreEmpresa(empresa.getNombreEmpresa());
         t.setUbicacionEmpresa(empresa.getUbicacionEmpresa());
@@ -41,7 +41,7 @@ public class EmpresaService {//CambioGiancarlo
     }
 
     public Empresa eliminar(Long id) throws Exception{
-        Empresa t = empresaRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException("No se encontro el ID" + id));
+        Empresa t = empresaRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException("No se encontro el ID " + id));
         empresaRepo.delete(t);
         return t;
     }

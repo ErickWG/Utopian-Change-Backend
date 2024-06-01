@@ -15,4 +15,6 @@ public interface VentarRepo extends JpaRepository<Venta,Long> {
     @Query(value="SELECT * FROM venta v WHERE v.fecha_venta=?1", nativeQuery = true)
     List<Venta> findUsuariosConComprasEnfecha(LocalDate fecha_venta);
 
+    Venta findByFechaVenta(LocalDate fecha);
+
 }

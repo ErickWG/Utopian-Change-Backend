@@ -20,8 +20,10 @@ public class MaterialesReciService {
     public MaterialesReciService(MaterialRepo materialRepo) {
         this.materialRepo = materialRepo;
     }
+}
 
-    public MaterialesReci materialesReci(String nombreMaterial){
+
+/*    public MaterialesReci materialesReci(String nombreMaterial){
         List<Material> materials=materialRepo.findAll();
         MaterialesReci material;
         material=new MaterialesReci();
@@ -37,8 +39,8 @@ public class MaterialesReciService {
             }
         }
         return material;
-    }
-    public List<MaterialesReci> lsmaterialesReci(){
+    }*/
+/*    public List<MaterialesReci> lsmaterialesReci(){
         List<Material> materials=materialRepo.findAll();
         MaterialesReci material;
         List<MaterialesReci> lista=new ArrayList<>();
@@ -59,4 +61,4 @@ public class MaterialesReciService {
         }
         return lista;
     }
-}
+}*/

@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/empresa")
+
 public class  EmpresaController {
     @Autowired
     public final EmpresaService empresaService;
@@ -34,9 +36,9 @@ public class  EmpresaController {
         return new ResponseEntity<>(empresaService.insert(empresa), HttpStatus.CREATED);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Empresa> modifica(@PathVariable Long id,@RequestBody Empresa empresa) throws Exception {
-        return new ResponseEntity<>(empresaService.modifica(id, empresa), HttpStatus.OK);
+    @PutMapping
+    public ResponseEntity<Empresa> modifica(@RequestBody Empresa empresa) throws Exception {
+        return new ResponseEntity<>(empresaService.modifica(empresa), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

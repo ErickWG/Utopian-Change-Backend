@@ -1,5 +1,6 @@
 package com.upc.practice.Controller;
 
+import com.upc.practice.Model.Material;
 import com.upc.practice.Model.Producto;
 import com.upc.practice.Service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,4 +41,10 @@ public class ProductoController {
     }
     @GetMapping("/contarPorEmpresa")
     public ResponseEntity<Map<String,Long>> contarPorEmpresaProducto(Long empresa_id){return new ResponseEntity<>(productoService.ContarProductosPorEmpresa(empresa_id),HttpStatus.OK);}
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Producto> elimina (@PathVariable Long id) throws Exception {
+        return new ResponseEntity<>(productoService.eliminar(id), HttpStatus.OK);
+    }
+
 }

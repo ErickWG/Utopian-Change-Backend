@@ -19,7 +19,7 @@ public class MaterialesProService {
     public MaterialesProService(MaterialRepo materialRepo) {
         this.materialRepo = materialRepo;
     }
-    public MaterialesPro materialesPro(String nombreMaterial){
+/*    public MaterialesPro materialesPro(String nombreMaterial){
         List<Material> materials=materialRepo.findAll();
         MaterialesPro material;
         material=new MaterialesPro();
@@ -35,8 +35,8 @@ public class MaterialesProService {
             }
         }
         return material;
-    }
-    public List<MaterialesPro> lsmaterialesPro(){
+    }*/
+/*    public List<MaterialesPro> lsmaterialesPro(){
         List<Material> materials=materialRepo.findAll();
         MaterialesPro material;
         List<MaterialesPro> lista=new ArrayList<>();
@@ -51,5 +51,5 @@ public class MaterialesProService {
 
         }
         return lista;
-    }
+    }*/
 }

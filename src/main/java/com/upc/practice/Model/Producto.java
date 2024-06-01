@@ -21,6 +21,7 @@ public class Producto {
     private String nombreProducto;
     private String detalleProducto;
     private double precioProducto;
+    private String imagenProducto;
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Empresa empresa;

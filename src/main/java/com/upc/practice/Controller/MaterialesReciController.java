@@ -23,7 +23,7 @@ public class MaterialesReciController {
     public MaterialesReciController(MaterialesReciService materialesReciService) {
         this.materialesReciService = materialesReciService;
     }
-    @GetMapping
+/*    @GetMapping
     public ResponseEntity<MaterialesReci> materialesReci(@RequestParam String nombreMaterial){
         return new ResponseEntity<>(materialesReciService.materialesReci(nombreMaterial), HttpStatus.OK);
 
@@ -31,5 +31,5 @@ public class MaterialesReciController {
     @GetMapping("/materialRecils")
     public ResponseEntity<List<MaterialesReci>> listamaterialesReci(){
         return new ResponseEntity<>(materialesReciService.lsmaterialesReci(), HttpStatus.OK);
-    }
+    }*/
 }

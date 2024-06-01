@@ -16,13 +16,6 @@ public class Material {
     private Long idMaterial;
     private String detalleMaterial;
     private String nombreMaterial;
-    private Double Precio;
-    private Boolean es_reciclable;
-
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
-    private CentroReciclaje centroReciclaje;
 
 
 }

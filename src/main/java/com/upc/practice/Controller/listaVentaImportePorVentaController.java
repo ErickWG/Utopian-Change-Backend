@@ -26,7 +26,7 @@ public class listaVentaImportePorVentaController {
 
 
     @GetMapping
-    public ResponseEntity<List<listaVentaImportePorVenta>> listaVentaImportePorVenta(@RequestParam Long idVenta){
-        return new ResponseEntity<>(listaVentaImportePorVentaService.listaVentaImportePorVenta(idVenta), HttpStatus.OK);
+    public ResponseEntity<List<listaVentaImportePorVenta>> listaVentaImportePorVenta(){
+        return new ResponseEntity<>(listaVentaImportePorVentaService.listaVentaImportePorVenta(), HttpStatus.OK);
     }
 }
